@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>概要 | Limosa Unity SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="概要 | Limosa Unity SDK ">
+      
+      
+      <link rel="icon" href="images/favicon_atmoph.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Limosa Unity SDK">
+            Limosa Unity SDK
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="概要">概要</h1>
+
+<p>Atmoph Window Yo SDK for Unity は、Atmoph Window Yoで動作するUnityアプリを作成するための Software Development Kit です。Atmoph Window YoはAndroidベースのOSで動作していますので、Android用アプリが動作します。SDKではAtmoph Window Yo特有の機能をアプリでサポートするためのフレームワークを提供します。</p>
+<h1 id="機能一覧">機能一覧</h1>
+<p>SDK経由でサポートが可能になる主な機能は次のものになります。</p>
+<h2 id="scopeをゲームコントローラとして使用">Scopeをゲームコントローラとして使用</h2>
+<p>Yoの望遠鏡型コントローラー Scope の次の入出力をUnityアプリで扱えるようになります。</p>
+<ol>
+<li><a href="how_to_use.html#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">Scopeのボタン操作の検知</a></li>
+<li><a href="how_to_use.html#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのズームリング操作の検知</a></li>
+<li><a href="how_to_use.html#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのポインティング位置、向き、距離センター値の取得</a></li>
+<li><a href="how_to_use.html#1-4-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a></li>
+<li><a href="how_to_use.html#1-5-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></li>
+<li><a href="how_to_use.html#1-6-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">Scopeへの振動指示</a></li>
+</ol>
+<h2 id="本体に対する操作">本体に対する操作</h2>
+<ol start="7">
+<li><a href="how_to_use.html#1-7-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">Unityアプリの終了を本体に伝える</a></li>
+</ol>
+<h1 id="scopeの各部の名称">Scopeの各部の名称</h1>
+<p><img src="images/scope_part_names.png" alt="Scopeの各部の名称"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

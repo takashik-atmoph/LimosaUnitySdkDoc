@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>インストール手順 | Limosa Unity SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="インストール手順 | Limosa Unity SDK ">
+      
+      
+      <link rel="icon" href="images/favicon_atmoph.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Limosa Unity SDK">
+            Limosa Unity SDK
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>SDKのインストールは、Unityのプロジェクトに&quot;LimosaAPI.unitypackage&quot;をインポートすることで行います。</p>
+<p>※ 各図はUnity6(6000.0.35f1.7976.6927)のものです。</p>
+<h1 id="インストール手順">インストール手順</h1>
+<ol>
+<li>Unityのメニューバーの次のボタンから&quot;LimosaAPI.unitypackage&quot;をインポートする</li>
+</ol>
+<p>Assets -&gt; Import Package -&gt; Custom Package</p>
+<p><img src="images/installation_1.png" alt="SDKパッケージ"></p>
+<ol start="2">
+<li>&quot;Import Unity Package&quot;のダイアログで、&quot;Import&quot;ボタンを推す</li>
+</ol>
+<p><img src="images/installation_2.png" alt="Import Unity Package"></p>
+<h1 id="sdkの内容">SDKの内容</h1>
+<table>
+<thead>
+<tr>
+<th>ファイル</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWYo-release.aar</td>
+<td>Yo本体からのインテントを受信するAndroid ARchive</td>
+</tr>
+<tr>
+<td>unity_plugin-release.aar</td>
+<td>AWYo-release.aar で受信したインテントをトリガーにUnityに通知を送るAndroid ARchive</td>
+</tr>
+<tr>
+<td>LimosaProtocol.prefab</td>
+<td>Yoの機能を利用するためのプレハブアセット。</td>
+</tr>
+<tr>
+<td>LimosaProtocol.cs</td>
+<td>Yoの機能を利用したり、Yoからの通知を受けるシングルトンクラス&quot;LimosaProtocol&quot;が定義されている。unity_plugin-release.aarと連携する。LimosaProtocol.prefabにComponentとしてアタッチされている。</td>
+</tr>
+<tr>
+<td>ScopeButton.cs</td>
+<td>LimosaProtocolクラスで受け取ったScopeのボタン操作をUnityのInputControlにマッピングするためのクラス&quot;ScopeButton&quot;が定義されている。LimosaProtocol.prefab内のScopeの各ボタンに対応するゲームオブジェクトにComponentとしてアタッチされている。</td>
+</tr>
+</tbody>
+</table>
+<p>※ SDKをインストール後、LimosaProtocol.prefabをHierarchyウィンドウに追加した状態</p>
+<p><img src="images/installation_3.png" alt="SDK Contents"></p>
+<h1 id="ビルド設定">ビルド設定</h1>
+<p>YoはAndroidベースのOSで動いていますので、ビルド設定はAndroid用プロファイルを用います。</p>
+<ol>
+<li>Unityのメニューバーの次のボタンから&quot;Build Profiles&quot;ダイアログを表示する</li>
+</ol>
+<p>File -&gt; Build Profiles</p>
+<p><img src="images/build_settings_1.png" alt="Build Profiles"></p>
+<ol start="2">
+<li>&quot;Add Build Profile&quot;ボタンで&quot;Platform Browser&quot;ダイアログを開き、&quot;Android&quot;を選択して&quot;Add Build Profile&quot;ボタンを押す。これで新しい&quot;Android Prifile&quot;ができる。</li>
+</ol>
+<p><img src="images/build_settings_2.png" alt="New Android Profile"></p>
+<ol start="3">
+<li>&quot;Switch Profile&quot;ボタンで 2 で追加したAndroid Prifileに切り替える。</li>
+<li>Android Prifile の次の設定を変更する。
+4-1. &quot;Run device&quot; でYo開発機を選択</li>
+</ol>
+<p>※図はPCにUSBでYo開発機を繋いだ状態。&quot;Atmoph AW103(XXXXXX-XXXXX)&quot;がYo開発機。XXXXXX-XXXXXのシリアルは開発機ごとに異なる。本体にIPアドレスを設定した場合、IPアドレスでも選択可能。</p>
+<p><img src="images/build_settings_3.png" alt="Run Device"></p>
+<pre><code>4-2. &quot;Customize player settings&quot;ボタンを押して設定項目を拡張
+4-3. &quot;Identification&quot; -&gt; &quot;Minimum API Level&quot;を&quot;Android 13.0(API level 33)&quot;に設定
+</code></pre>
+<p><img src="images/build_settings_4.png" alt="Minimum API Level"></p>
+<pre><code>4-4. &quot;Configuration&quot; -&gt; &quot;Active Input Handling&quot;を&quot;Input System Package(New)&quot;に設定
+</code></pre>
+<p><img src="images/build_settings_5.png" alt="Active Input Handling"></p>
+<p>※次の&quot;Unity editor restart required&quot;ダイアログが表示される場合は、&quot;Apply&quot;ボタンを押してUnity Editorを再起動します。
+<img src="images/build_settings_6.png" alt="Unity editor restart required"></p>
+<hr>
+<p>以上でビルド設定は完了です。Android Prifileの&quot;Build And Run&quot;ボタンを押して、アプリがビルドされYo開発機で起動されたら成功です。</p>
+<p>Universal 3Dテンプレートで作った空アプリでビルドと起動が成功すると、Yo開発機に次のような画面が表示されます。
+<img src="images/empty_app.png" alt="Universal 3D empty App"></p>
+<p>※ &quot;Build And Run&quot;ボタンを押すとビルド結果のAPKファイルを保存するパスの設定が求められます。任意のパスを設定してください。</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>1 基本的な使い方 | Limosa Unity SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="1 基本的な使い方 | Limosa Unity SDK ">
+      
+      
+      <link rel="icon" href="images/favicon_atmoph.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Limosa Unity SDK">
+            Limosa Unity SDK
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="1-基本的な使い方">1 基本的な使い方</h1>
+
+<h2 id="1-1-scopeのボタン操作の検知">1-1 Scopeのボタン操作の検知</h2>
+<p>Scopeのボタン操作は次の二つの方法で検知できます。</p>
+<h3 id="1-1-1-scopeボタンのinputcontrolへのマッピング">1-1-1 ScopeボタンのInputControlへのマッピング</h3>
+<p>Scopeのボタン操作をUnityが扱えるボタン操作など各種InputControlにマッピングします。
+LimosaProtocol.prefabをHierarchyウィンドウに追加すると、その子オブジェクトのVirtualButtonsの子オブジェクトにScopeの各ボタンの名称のオブジェクトでマッピング先のInputControlが設定できます。設定先はScope Button(Script)コンポーネントのControl Pathプロパティになります。</p>
+<p><img src="images/button_mapping_1.png" alt="Button Mapping"></p>
+<p>デフォルトのマッピングは次のようになっています。</p>
+<table>
+<thead>
+<tr>
+<th>オブジェクト</th>
+<th>InputControl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power</td>
+<td>(未設定)</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>Stick/Up [Joystick]</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>Stick/Down [Joystick]</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>Stick/Left [Joystick]</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Stick/Right [Joystick]</td>
+</tr>
+<tr>
+<td>Main</td>
+<td>(未設定)</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td>(未設定)</td>
+</tr>
+<tr>
+<td>View</td>
+<td>(未設定)</td>
+</tr>
+<tr>
+<td>Trigget</td>
+<td>(未設定)</td>
+</tr>
+</tbody>
+</table>
+<p>Scope Button(Script)コンポーネントはカスタムのOn-Screen Controlで、ScopeButtonクラスはOnScreenControlクラスを継承しています。各ボタンが押された際にはSendValueToControl(1.0f)、離された際にはSendValueToControl(0.0f)が呼び出されます。</p>
+<h3 id="1-1-2-scopeボタンの状態データを取得">1-1-2 Scopeボタンの状態データを取得</h3>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawData">LimosaProtocol.ScopeRawData</a>プロパティからその時点のScopeの各種データを取得できます。プロパティの型は<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;string, RawData&gt;</a>で、データを取得したScopeのアドレスをキーに<a class="xref" href="api/Limosa.RawData.html">RawData</a>インスタンスが取得できます。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>ただし現状では同時にペアリングされるScopeは1台であるため、Dictionaryに同時に入る要素は一つであり、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.enumerable.firstordefault">IReadOnlyDictionary.FirstOrDefault</a>でもRawDataインスタンスの取得が可能です。</p>
+</div>
+<p>ボタンの状態データは<a class="xref" href="api/Limosa.ButtonState.html">ButtonState</a>型である<a class="xref" href="api/Limosa.RawData.html#Limosa_RawData_button">RawData.button</a>プロパティに格納されています。</p>
+<pre><code>var data = Limosa.ScopeRawData.FirstOrDefault().Value;
+Log($"ButtonState: {data.button}");</code></pre>
+<h2 id="1-2-scopeのズームリングデータの取得">1-2 Scopeのズームリングデータの取得</h2>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawData">LimosaProtocol.ScopeRawData</a>プロパティからその時点のScopeの各種データを取得できます。プロパティの型は<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;string, RawData&gt;</a>で、データを取得したScopeのアドレスをキーに<a class="xref" href="api/Limosa.RawData.html">RawData</a>インスタンスが取得できます。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>ただし現状では同時にペアリングされるScopeは1台であるため、Dictionaryに同時に入る要素は一つであり、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.enumerable.firstordefault">IReadOnlyDictionary.FirstOrDefault</a>でもRawDataインスタンスの取得が可能です。</p>
+</div>
+<p>ズームリングの状態データは<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>型である<a class="xref" href="api/Limosa.RawData.html#Limosa_RawData_zoom">RawData.zoom</a>プロパティに格納されています。</p>
+<pre><code>var data = Limosa.ScopeRawData.FirstOrDefault().Value;
+Log($"Zoom: {data.zoom}");</code></pre>
+<h2 id="1-3-scopeのポインティング位置向き距離センター値の取得">1-3 Scopeのポインティング位置、向き、距離センター値の取得</h2>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">LimosaProtocol.ScopeConvertedData</a>プロパティからその時点のScopeの各種変換済みデータを取得できます。プロパティの型は<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;string, ConvertedData&gt;</a>で、データを取得したScopeのアドレスをキーに<a class="xref" href="api/Limosa.ConvertedData.html">ConvertedData</a>インスタンスが取得できます。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>ただし現状では同時にペアリングされるScopeは1台であるため、Dictionaryに同時に入る要素は一つであり、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.enumerable.firstordefault">IReadOnlyDictionary.FirstOrDefault</a>でもRawDataインスタンスの取得が可能です。</p>
+</div>
+<p>ポインティング位置のデータは<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>型である<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_x">ConvertedData.x</a>、<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_y">ConvertedData.y</a>プロパティに格納されています。</p>
+<pre><code>var data = Limosa.ScopeConvertedData.FirstOrDefault().Value;
+Log($"Point position: x-{data.x},x-{data.y}");</code></pre>
+<p>ポインティング位置の座標はYoの画面に対して次のようになります。</p>
+<p><img src="images/pointing_coordinate.png" alt="Pointing Coordinate"></p>
+<p>Scopeの向きは、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>型である<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_pitch">ConvertedData.pitch</a>、<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_yaw">ConvertedData.yaw</a>、<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_roll">ConvertedData.roll</a>プロパティに格納されています。</p>
+<pre><code>var data = Limosa.ScopeConvertedData.FirstOrDefault().Value;
+Log($"Scope direction: pitch-{data.pitch},yaw-{data.yaw},roll-{data.roll}");</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>クォータニオンでScopeの向きを取得したい場合は、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawData">LimosaProtocol.ScopeRawData</a>インスタンスから取得できます。インスタンスの取得方法は<a href="#1-1-2-scope%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%E7%8A%B6%E6%85%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%96%E5%BE%97">1-1-2 Scopeボタンの状態データを取得</a>を参照してください。</p>
+</div>
+<p>距離センター値は、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>型である<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_distance">ConvertedData.distance</a>プロパティに格納されています。Scopeの<a href="index.html#scope%E3%81%AE%E5%90%84%E9%83%A8%E3%81%AE%E5%90%8D%E7%A7%B0">距離センサー</a>からScopeの筒の方向の障害物までの距離(mm)になります。</p>
+<pre><code>var data = Limosa.ScopeConvertedData.FirstOrDefault().Value;
+Log($"Scope distance: {data.distance}");</code></pre>
+<h2 id="1-4-scopeの動的情報の取得接続状態アドレスバッテリー残量">1-4 Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</h2>
+<h3 id="1-4-1-接続状態アドレスの取得">1-4-1 接続状態、アドレスの取得</h3>
+<p>2通りの方法でScopeとの接続状態やアドレスが取得できます。</p>
+<h4 id="1-4-1-1-limosaprotocolgetscopesメソッドを仕様">1-4-1-1 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopes">LimosaProtocol.GetScopes</a>メソッドを仕様</h4>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopes">LimosaProtocol.GetScopes</a>メソッドでScopeのアドレスや接続状態が取得できます。返値の型は<a class="xref" href="api/Limosa.BondedScope.html">BondedScope</a>です。
+返値の要素の<a class="xref" href="api/Limosa.BondedScope.html#Limosa_BondedScope_scopes">BondedScope.scopes</a>は<a class="xref" href="api/Limosa.BondedScope.ScopeState.html">ScopeState</a>のリストになっており、そのプロパティからScopeのアドレスや接続状態が取得できます。</p>
+<pre><code>var bondedScope = Limosa.LimosaProtocol.GetScopes();
+foreach (Limosa.BondedScope.ScopeState scope in bondedScope)
+{
+    Log($"ScopeStateBatteryLevel: {scope}");
+};</code></pre>
+<h4 id="1-4-1-2-limosaprotocolscopeconnectionstateプロパティを使用">1-4-1-2 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConnectionState">LimosaProtocol.ScopeConnectionState</a>プロパティを使用</h4>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConnectionState">LimosaProtocol.ScopeConnectionState</a>プロパティからScopeのアドレスと接続状態を取得できます。プロパティの型は<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;string, bool&gt;</a>で、データを取得したScopeのアドレスをキーに接続状態を<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>型のデータで取得できます。trueは接続中、falseは非接続を表します。
+ただし現状では同時にペアリングされるScopeは1台であるため、Dictionaryに同時に入る要素は一つであり、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.enumerable.firstordefault">IReadOnlyDictionary.FirstOrDefault</a>でもデータの取得が可能です。</p>
+<pre><code>var state = Limosa.ScopeConnectionState.FirstOrDefault().Value;
+Log($"ScopeConnectionState: address-{state.Key}, connection state-{state.Value}");</code></pre>
+<h4 id="1-4-1-3-limosaprotocolonconnectionstatechangedeventプロパティにコールバックメソッドを追加する">1-4-1-3 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnectionStateChangedEvent">LimosaProtocol.OnConnectionStateChangedEvent</a>プロパティにコールバックメソッドを追加する</h4>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnectionStateChangedEvent">LimosaProtocol.OnConnectionStateChangedEvent</a>プロパティは<a href="https://docs.unity3d.com/ja/2023.2/ScriptReference/Events.UnityEvent.html">UnityEvent</a>型で、追加したコールバックメソッドは新しいScopeが接続されたタイミングと、接続されていたScopeの接続が切れたタイミングで呼び出されます。</p>
+<p>コールバックメソッドの追加や削除は<a href="https://docs.unity3d.com/ja/2023.2/ScriptReference/Events.UnityEvent.html">UnityEvent</a>のメソッドを使って実施してください。</p>
+<pre><code>Limosa.LimosaProtocol.OnConnectionStateChangedEvent.AddListener(OnScopeStateChanged);
+private void OnScopeStateChanged()
+{
+    var state = Limosa.LimosaProtocol.ScopeConnectionState.FirstOrDefault();
+    Debug.Log($"OnScopeStateChanged. {state.Key}: {state.Value}");
+}
+
+Limosa.LimosaProtocol.OnConnectionStateChangedEvent.RemoveListener(OnScopeStateChanged);
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>アプリ終了時には、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnectionStateChangedEvent">LimosaProtocol.OnConnectionStateChangedEvent</a>プロパティから追加したコールバックメソッドを全て削除してくだい。</p>
+</div>
+<h3 id="1-4-2-バッテリー残量の取得">1-4-2 バッテリー残量の取得</h3>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetBatteryLevel_System_String_">LimosaProtocol.GetBatteryLevel</a>メソッドでScopeのバッテリー残量を取得できます。引数で指定したアドレスのScopeのバッテリー残業が、<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>型の返値で返ります。値は満充電に対するバッテリー残量の割合となっており、パーセンテージで0～100の値になります。</p>
+<pre><code>var batteryLevel = Limosa.LimosaProtocol.GetBatteryLevel("address");
+Log($"BatteryLevel: {batteryLevel}");</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Scopeとの接続直後など、Scopeのバッテリー残量が正確に把握できていない状態では、Scopeと接続されていてもバッテリー残量の値は'-1'になります。</p>
+</div>
+<h2 id="1-5-scopeの静的情報の取得本体型番シリアルナンバーfwバージョンpnpid">1-5 Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</h2>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopeInfo_System_String_">LimosaProtocol.GetScopeInfo</a>メソッドで、引数で指定したアドレスのScopeの静的情報を取得できます。返値の型は<a class="xref" href="api/Limosa.ScopeInfo.html">ScopeInfo</a>です。</p>
+<pre><code>var scopeInfo = Limosa.LimosaProtocol.GetBatteryLevel("address");
+Log($"ScopeInfo: {scopeInfo}");</code></pre>
+<h2 id="1-6-scopeへの振動指示">1-6. Scopeへの振動指示</h2>
+<p>次の２つのメソッドで、Scopeのバイブレーション機能を起動させられます。</p>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_Vibrate_System_String___System_Int32_">LimosaProtocol.Vibrate</a>
+<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_VibrateToAll_System_Int32_">LimosaProtocol.VibrateToAll</a></p>
+<p>前者はtargetAddress引数で指定したScopeのみの振動指示、後者は接続している全Scopeへの振動指示となります。
+pattern引数で振動の種類を指示します。次の仕様になります。</p>
+<p><img src="images/vibrate_pattern.png" alt="Vibrate Pattern"></p>
+<h2 id="1-7-unityアプリの終了を本体に伝える">1-7 Unityアプリの終了を本体に伝える</h2>
+<p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GoBackToLimosa">LimosaProtocol.GoBackToLimosa</a>メソッドでアプリケーションの終了を本体に伝え、風景再生画面に戻ります。</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>アプリケーション終了時には必ず呼び出してください。</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>アプリケーションの終了処理はアプリケーション自身で行う必要があります。</p>
+</div>
+<h1 id="2-高度な使い方">2 高度な使い方</h1>
+<h2 id="2-1-scopeのボタン操作のコールバックメソッドによる検知方法">2-1 Scopeのボタン操作のコールバックメソッドによる検知方法</h2>
+<p>Scopeのボタン操作を検知する方法で、<a href="#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">1-1 Scopeのボタン操作の検知</a>よりも自由度の高い方法として、「Scopeボタンの状態が変わった際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnButtonsStateChanged_System_String_">LimosaProtocol.OnButtonsStateChanged</a>メソッドをオーバーライドします。このメソッドはScopeボタンの状態が変わったタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnButtonsStateChanged_System_String_">LimosaProtocol.OnButtonsStateChanged</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.ButtonStateChanged.html">ButtonStateChanged</a>インスタンスを取得できます。</p>
+<p><code>ButtonStateChanged buttonStates = JsonUtility.FromJson&lt;ButtonStateChanged&gt;(data);</code></p>
+<h2 id="2-2-scopeのズームリングデータのコールバックメソッドによる取得方法">2-2 Scopeのズームリングデータのコールバックメソッドによる取得方法</h2>
+<p>Scopeのズームリングデータを取得する方法で、<a href="#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">1-2 Scopeのズームリングデータの取得</a>よりも自由度の高い方法として、「Scopeのズームリングの値が変わった際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnEncoderValueChanged_System_String_">LimosaProtocol.OnEncoderValueChanged</a>メソッドをオーバーライドします。このメソッドはScopeのズームリングの値が変わったタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnEncoderValueChanged_System_String_">LimosaProtocol.OnEncoderValueChanged</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.IntegerChanged.html">IntegerChanged</a>インスタンスを取得できます。</p>
+<p><code>IntegerChanged integerChanged = JsonUtility.FromJson&lt;IntegerChanged&gt;(data);</code></p>
+<p><a class="xref" href="api/Limosa.IntegerChanged.html#Limosa_IntegerChanged_previous">IntegerChanged.previous</a>で変更前の値、<a class="xref" href="api/Limosa.IntegerChanged.html#Limosa_IntegerChanged_current">IntegerChanged.current</a>で変更後の現在の値が取得できます。</p>
+<h2 id="2-3-scopeのバッテリー残量のコールバックメソッドによる取得方法">2-3 Scopeのバッテリー残量のコールバックメソッドによる取得方法</h2>
+<p>Scopeのバッテリー残量を取得する方法で、<a href="#1-4-2-%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E3%81%AE%E5%8F%96%E5%BE%97">1-4-2 バッテリー残量の取得</a>よりも自由度の高い方法として、「Scopeのバッテリー残量の値が変わった際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnBatteryLevelChanged_System_String_">LimosaProtocol.OnBatteryLevelChanged</a>メソッドをオーバーライドします。このメソッドはScopeのバッテリー残量の値が変わったタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnBatteryLevelChanged_System_String_">LimosaProtocol.OnEncoderValueChangedOnBatteryLevelChanged</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.IntegerChanged.html">IntegerChanged</a>インスタンスを取得できます。</p>
+<p><code>IntegerChanged integerChanged = JsonUtility.FromJson&lt;IntegerChanged&gt;(data);</code></p>
+<p><a class="xref" href="api/Limosa.IntegerChanged.html#Limosa_IntegerChanged_previous">IntegerChanged.previous</a>で変更前の値、<a class="xref" href="api/Limosa.IntegerChanged.html#Limosa_IntegerChanged_current">IntegerChanged.current</a>で変更後の現在の値が取得できます。</p>
+<h2 id="2-4-scopeの接続状態アドレス取得のコールバックメソッドによる取得方法">2-4 Scopeの接続状態、アドレス取得のコールバックメソッドによる取得方法</h2>
+<p>Scopeの接続状態やアドレスを取得する方法で、<a href="#1-4-1-%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AE%E5%8F%96%E5%BE%97">1-4-1 接続状態、アドレスの取得</a>よりも自由度の高い方法として、「Scopeが接続された際、また接続が切れた際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnected_System_String_">LimosaProtocol.OnConnected</a>メソッド、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnDisconnected_System_String_">LimosaProtocol.OnDisconnected</a>メソッドをオーバーライドします。前者のメソッドはScopeが接続されたタイミング、後者のメソッドは接続が切れたで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnected_System_String_">LimosaProtocol.OnConnected</a>メソッド、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnDisconnected_System_String_">LimosaProtocol.OnDisconnected</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.ScopeAddress.html">ScopeAddress</a>インスタンスを取得できます。これが接続された、または接続が切れたScopeのアドレスになります。</p>
+<p><code>ScopeAddress scopeAddress = JsonUtility.FromJson&lt;ScopeAddress&gt;(data);</code></p>
+<h2 id="2-5-scopeのポインティング位置向き距離センター値のコールバックメソッドによる取得方法">2-5 Scopeのポインティング位置、向き、距離センター値のコールバックメソッドによる取得方法</h2>
+<p>Scopeのポインティング位置、向き、距離センター値を取得する方法で、<a href="#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">1-3 Scopeのポインティング位置、向き、距離センター値の取得</a>よりも自由度の高い方法として、「Scopeの<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">ScopeConvertedData</a>データが更新された際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnDataConverted_System_String_">LimosaProtocol.OnDataConverted</a>メソッドをオーバーライドします。このメソッドはScopeの<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">ScopeConvertedData</a>に含まれるデータが更新されたタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnDataConverted_System_String_">LimosaProtocol.OnDataConverted</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">ScopeConvertedData</a>インスタンスを取得できます。</p>
+<p><code>ConvertedData convertedData = JsonUtility.FromJson&lt;ConvertedData&gt;(data);</code></p>
+<h2 id="2-6-scopeのボタン状態ズームリングデータクォータニオンのコールバックメソッドによる取得方法">2-6 Scopeのボタン状態、ズームリングデータ、クォータニオンのコールバックメソッドによる取得方法</h2>
+<p>Scopeのボタン状態、ズームリングデータ、クォータニオンを取得する方法で、<a href="#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">1-2 Scopeのズームリングデータの取得</a>や<a href="#1-1-2-scope%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%E7%8A%B6%E6%85%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%96%E5%BE%97">1-1-2 Scopeボタンの状態データを取得</a>よりも自由度の高い方法として、「Scopeの<a class="xref" href="api/Limosa.RawData.html">RawData</a>データが更新された際に呼ばれるコールバックメソッドをオーバーライド」があります。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnRawData_System_String_">LimosaProtocol.OnRawData</a>メソッドをオーバーライドします。このメソッドはScopeの<a class="xref" href="api/Limosa.RawData.html">RawData</a>に含まれるデータが更新されたタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnRawData_System_String_">LimosaProtocol.OnRawData</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.RawData.html">RawData</a>インスタンスを取得できます。</p>
+<p><code>RawData rawData = JsonUtility.FromJson&lt;RawData&gt;(data);</code></p>
+<h1 id="3-その他の機能">3 その他の機能</h1>
+<h2 id="3-1-offset">3-1 Offset</h2>
+<p>Scopeには<a href="index.html#scope%E3%81%AE%E5%90%84%E9%83%A8%E3%81%AE%E5%90%8D%E7%A7%B0">メニューボタン</a>長押しで起動する「ポインティング位置のリセット」機能があります。風景再生時には機能が実行されるとポインティング位置が画面中央にリセットされます。このような機能をアプリケーションにも組み込むには、リセット時に保持されるOffset値を使います。</p>
+<h3 id="3-1-1-limosaprotocolscopeoffsetlimosaprotocolscoperawoffset-プロパティからのoffsetの取得">3-1-1 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeOffset">LimosaProtocol.ScopeOffset</a>、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawOffset">LimosaProtocol.ScopeRawOffset </a>プロパティからのOffsetの取得</h3>
+<p>最後にリセット機能が実行された際のScopeの<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">ScopeConvertedData</a>、<a class="xref" href="api/Limosa.RawData.html">RawData</a>は、Offset値としてそれぞれ次のプロパティに保持されます。</p>
+<ul>
+<li><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeOffset">LimosaProtocol.ScopeOffset</a></li>
+<li><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawOffset">LimosaProtocol.ScopeRawOffset </a></li>
+</ul>
+<p>風景再生時のようなポインティング位置のリセット機能をアプリケーションに組み込みたい場合は、これらOffset値を次のプロパティから取得できる現時点の<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">ScopeConvertedData</a>、<a class="xref" href="api/Limosa.RawData.html">RawData</a>データから引くことで、リセット時からの遷移分のデータが取得できます。</p>
+<ul>
+<li><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeConvertedData">LimosaProtocol.ScopeConvertedData</a></li>
+<li><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_ScopeRawData">LimosaProtocol.ScopeRawData</a></li>
+</ul>
+<h3 id="3-1-2-limosaprotocolonoffsetresetコールバックによるoffsetの取得">3-1-2 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnOffsetReset_System_String_">LimosaProtocol.OnOffsetReset</a>コールバックによるOffsetの取得</h3>
+<p>「Scopeのポインティング位置のリセット機能が実行された際に呼ばれるコールバックメソッドをオーバーライド」でもOffset値の取得が可能です。
+LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnOffsetReset_System_String_">LimosaProtocol.OnOffsetReset</a>メソッドをオーバーライドします。このメソッドはScopeのポインティング位置のリセットが実行されたタイミングで呼び出されますので、必要な処理を実装することができます。</p>
+<p>カスタム実装には<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnOffsetReset_System_String_">LimosaProtocol.OnOffsetReset</a>メソッドの実装を参考にできます。引数のdataを使って、次のコードで<a class="xref" href="api/Limosa.ScopeOffset.html">ScopeOffset</a>インスタンスを取得できます。</p>
+<p><code>ScopeOffset scopeOffset = JsonUtility.FromJson&lt;ScopeOffset&gt;(data);</code></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
