@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>1 基本的な使い方 | Limosa Unity SDK </title>
+      <title>&quot;使い方&quot;の目次  | Limosa Unity SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="1 基本的な使い方 | Limosa Unity SDK ">
+      <meta name="title" content="&quot;使い方&quot;の目次  | Limosa Unity SDK ">
       
       
       <link rel="icon" href="images/favicon_atmoph.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      
+      <meta name="docfx:docurl" content="https://bitbucket.org/atmophinc/limosaunitysdk/src/main/Docfx/how_to_use.md#lines-1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -71,8 +71,58 @@
         </div>
 
         <article data-uid="">
-<h1 id="1-基本的な使い方">1 基本的な使い方</h1>
+<h1 id="使い方の目次-">&quot;使い方&quot;の目次 <!-- omit in toc --></h1>
 
+<ul>
+<li><a href="#1-%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9">1 基本的な使い方</a>
+<ul>
+<li><a href="#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">1-1 Scopeのボタン操作の検知</a>
+<ul>
+<li><a href="#1-1-1-scope%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AEinputcontrol%E3%81%B8%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">1-1-1 ScopeボタンのInputControlへのマッピング</a></li>
+<li><a href="#1-1-2-scope%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%AE%E7%8A%B6%E6%85%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%96%E5%BE%97">1-1-2 Scopeボタンの状態データを取得</a></li>
+</ul>
+</li>
+<li><a href="#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">1-2 Scopeのズームリングデータの取得</a></li>
+<li><a href="#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">1-3 Scopeのポインティング位置、向き、距離センター値の取得</a></li>
+<li><a href="#1-4-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">1-4 Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a>
+<ul>
+<li><a href="#1-4-1-%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%AE%E5%8F%96%E5%BE%97">1-4-1 接続状態、アドレスの取得</a>
+<ul>
+<li><a href="#1-4-1-1-limosaprotocolgetscopes%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E4%BD%BF%E7%94%A8">1-4-1-1 LimosaProtocol.GetScopesメソッドを使用</a></li>
+<li><a href="#1-4-1-2-limosaprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">1-4-1-2 LimosaProtocol.ScopeConnectionStateプロパティを使用</a></li>
+<li><a href="#1-4-1-3-limosaprotocolonconnectionstatechangedevent%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">1-4-1-3 LimosaProtocol.OnConnectionStateChangedEventプロパティにコールバックメソッドを追加する</a></li>
+</ul>
+</li>
+<li><a href="#1-4-2-%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E3%81%AE%E5%8F%96%E5%BE%97">1-4-2 バッテリー残量の取得</a></li>
+</ul>
+</li>
+<li><a href="#1-5-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">1-5 Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></li>
+<li><a href="#1-6-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">1-6 Scopeへの振動指示</a></li>
+<li><a href="#1-7-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">1-7 Unityアプリの終了を本体に伝える</a></li>
+</ul>
+</li>
+<li><a href="#2-%E9%AB%98%E5%BA%A6%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9">2 高度な使い方</a>
+<ul>
+<li><a href="#2-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E6%A4%9C%E7%9F%A5%E6%96%B9%E6%B3%95">2-1 Scopeのボタン操作のコールバックメソッドによる検知方法</a></li>
+<li><a href="#2-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95">2-2 Scopeのズームリングデータのコールバックメソッドによる取得方法</a></li>
+<li><a href="#2-3-scope%E3%81%AE%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95">2-3 Scopeのバッテリー残量のコールバックメソッドによる取得方法</a></li>
+<li><a href="#2-4-scope%E3%81%AE%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%8F%96%E5%BE%97%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95">2-4 Scopeの接続状態、アドレス取得のコールバックメソッドによる取得方法</a></li>
+<li><a href="#2-5-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95">2-5 Scopeのポインティング位置、向き、距離センター値のコールバックメソッドによる取得方法</a></li>
+<li><a href="#2-6-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E7%8A%B6%E6%85%8B%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%8B%E3%82%AA%E3%83%B3%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95">2-6 Scopeのボタン状態、ズームリングデータ、クォータニオンのコールバックメソッドによる取得方法</a></li>
+</ul>
+</li>
+<li><a href="#3-%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD">3 その他の機能</a>
+<ul>
+<li><a href="#3-1-offset">3-1 Offset</a>
+<ul>
+<li><a href="#3-1-1-limosaprotocolscopeoffsetlimosaprotocolscoperawoffset-%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%8B%E3%82%89%E3%81%AEoffset%E3%81%AE%E5%8F%96%E5%BE%97">3-1-1 LimosaProtocol.ScopeOffset、LimosaProtocol.ScopeRawOffset プロパティからのOffsetの取得</a></li>
+<li><a href="#3-1-2-limosaprotocolonoffsetreset%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E3%82%88%E3%82%8Boffset%E3%81%AE%E5%8F%96%E5%BE%97">3-1-2 LimosaProtocol.OnOffsetResetコールバックによるOffsetの取得</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-基本的な使い方">1 基本的な使い方</h1>
 <h2 id="1-1-scopeのボタン操作の検知">1-1 Scopeのボタン操作の検知</h2>
 <p>Scopeのボタン操作は次の二つの方法で検知できます。</p>
 <h3 id="1-1-1-scopeボタンのinputcontrolへのマッピング">1-1-1 ScopeボタンのInputControlへのマッピング</h3>
@@ -169,7 +219,7 @@ Log($"Scope distance: {data.distance}");</code></pre>
 <h2 id="1-4-scopeの動的情報の取得接続状態アドレスバッテリー残量">1-4 Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</h2>
 <h3 id="1-4-1-接続状態アドレスの取得">1-4-1 接続状態、アドレスの取得</h3>
 <p>2通りの方法でScopeとの接続状態やアドレスが取得できます。</p>
-<h4 id="1-4-1-1-limosaprotocolgetscopesメソッドを仕様">1-4-1-1 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopes">LimosaProtocol.GetScopes</a>メソッドを仕様</h4>
+<h4 id="1-4-1-1-limosaprotocolgetscopesメソッドを使用">1-4-1-1 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopes">LimosaProtocol.GetScopes</a>メソッドを使用</h4>
 <p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopes">LimosaProtocol.GetScopes</a>メソッドでScopeのアドレスや接続状態が取得できます。返値の型は<a class="xref" href="api/Limosa.BondedScope.html">BondedScope</a>です。
 返値の要素の<a class="xref" href="api/Limosa.BondedScope.html#Limosa_BondedScope_scopes">BondedScope.scopes</a>は<a class="xref" href="api/Limosa.BondedScope.ScopeState.html">ScopeState</a>のリストになっており、そのプロパティからScopeのアドレスや接続状態が取得できます。</p>
 <pre><code>var bondedScope = Limosa.LimosaProtocol.GetScopes();
@@ -210,8 +260,8 @@ Log($"BatteryLevel: {batteryLevel}");</code></pre>
 <p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GetScopeInfo_System_String_">LimosaProtocol.GetScopeInfo</a>メソッドで、引数で指定したアドレスのScopeの静的情報を取得できます。返値の型は<a class="xref" href="api/Limosa.ScopeInfo.html">ScopeInfo</a>です。</p>
 <pre><code>var scopeInfo = Limosa.LimosaProtocol.GetBatteryLevel("address");
 Log($"ScopeInfo: {scopeInfo}");</code></pre>
-<h2 id="1-6-scopeへの振動指示">1-6. Scopeへの振動指示</h2>
-<p>次の２つのメソッドで、Scopeのバイブレーション機能を起動させられます。</p>
+<h2 id="1-6-scopeへの振動指示">1-6 Scopeへの振動指示</h2>
+<p>次の２つのメソッドで、Scopeのバイブレーション機能を起動できます。</p>
 <p><a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_Vibrate_System_String___System_Int32_">LimosaProtocol.Vibrate</a>
 <a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_VibrateToAll_System_Int32_">LimosaProtocol.VibrateToAll</a></p>
 <p>前者はtargetAddress引数で指定したScopeのみの振動指示、後者は接続している全Scopeへの振動指示となります。
@@ -228,6 +278,10 @@ pattern引数で振動の種類を指示します。次の仕様になります�
 <p>アプリケーションの終了処理はアプリケーション自身で行う必要があります。</p>
 </div>
 <h1 id="2-高度な使い方">2 高度な使い方</h1>
+<div class="NOTE">
+<h5>Note</h5>
+<p>LimosaProtocolを継承するカスタムクラスを作成する方法を採用した場合、LimosaProtocolにアタッチされているLimosaProtocol.csコンポーネントをカスタムクラスに差し替えてください。</p>
+</div>
 <h2 id="2-1-scopeのボタン操作のコールバックメソッドによる検知方法">2-1 Scopeのボタン操作のコールバックメソッドによる検知方法</h2>
 <p>Scopeのボタン操作を検知する方法で、<a href="#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">1-1 Scopeのボタン操作の検知</a>よりも自由度の高い方法として、「Scopeボタンの状態が変わった際に呼ばれるコールバックメソッドをオーバーライド」があります。
 LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnButtonsStateChanged_System_String_">LimosaProtocol.OnButtonsStateChanged</a>メソッドをオーバーライドします。このメソッドはScopeボタンの状態が変わったタイミングで呼び出されますので、必要な処理を実装することができます。</p>
@@ -283,6 +337,7 @@ LimosaProtocolを継承するカスタムクラスを作成し、<a class="xref"
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/atmophinc/limosaunitysdk/src/main/Docfx/how_to_use.md#lines-1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

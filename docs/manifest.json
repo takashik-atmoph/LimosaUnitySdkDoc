@@ -1,5 +1,5 @@
 {
-  "source_base_path": "F:/Unity/LimosaApiTestProgram/DocFx",
+  "source_base_path": "D:/Work/Atmoph/Limosa/SDK/UnitySDK/Sources/limosaunitysdk/Docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -148,7 +148,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Limosa.ScopeButton",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Limosa.ScopeButton.yml\" sourcestartlinenumber=\"1\">Class to map the Scope button to the controll path.\nThis class is set to button objects in VirtualButtons of LimosaProtocol.prefab</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -221,692 +221,6 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TDxUnity3D.RTCameraController.WCS.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TDxUnity3D.RTCameraController.WCS.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TDxUnity3D.RTCameraController.WCS",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TDxUnity3D.RTCameraController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TDxUnity3D.RTCameraController.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TDxUnity3D.RTCameraController",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TDxUnity3D.RTTDxController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TDxUnity3D.RTTDxController.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TDxUnity3D.RTTDxController",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TDxUnity3D.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TDxUnity3D.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TDxUnity3D",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark01.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark01.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark01",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark01_UGUI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark01_UGUI.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark01_UGUI",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark02.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark02.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark02",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark03.BenchmarkType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark03.BenchmarkType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark03.BenchmarkType",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark03.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark03.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark03",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.Benchmark04.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.Benchmark04.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.Benchmark04",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.CameraController.CameraModes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.CameraController.CameraModes.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.CameraController.CameraModes",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.CameraController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.CameraController.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.CameraController",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.ObjectSpin.MotionType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.ObjectSpin.MotionType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.ObjectSpin.MotionType",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.ObjectSpin.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.ObjectSpin.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.ObjectSpin",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.ShaderPropAnimator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.ShaderPropAnimator.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.ShaderPropAnimator",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.SimpleScript.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.SimpleScript.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.SimpleScript",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.SkewTextExample.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.SkewTextExample.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.SkewTextExample",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_ExampleScript_01.objectType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_ExampleScript_01.objectType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_ExampleScript_01.objectType",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_ExampleScript_01.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_ExampleScript_01.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_ExampleScript_01",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_FrameRateCounter.FpsCounterAnchorPositions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_FrameRateCounter.FpsCounterAnchorPositions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_FrameRateCounter.FpsCounterAnchorPositions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_FrameRateCounter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_FrameRateCounter.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_FrameRateCounter",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_TextEventCheck.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_TextEventCheck.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_TextEventCheck",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_TextInfoDebugTool.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_TextInfoDebugTool.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_TextInfoDebugTool",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_TextSelector_A.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_TextSelector_A.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_TextSelector_A",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_TextSelector_B.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_TextSelector_B.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_TextSelector_B",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_UiFrameRateCounter.FpsCounterAnchorPositions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_UiFrameRateCounter.FpsCounterAnchorPositions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_UiFrameRateCounter.FpsCounterAnchorPositions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMP_UiFrameRateCounter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMP_UiFrameRateCounter.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMP_UiFrameRateCounter",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMPro_InstructionOverlay.FpsCounterAnchorPositions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMPro_InstructionOverlay.FpsCounterAnchorPositions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMPro_InstructionOverlay.FpsCounterAnchorPositions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TMPro_InstructionOverlay.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TMPro_InstructionOverlay.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TMPro_InstructionOverlay",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TeleType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TeleType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TeleType",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TextConsoleSimulator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TextConsoleSimulator.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TextConsoleSimulator",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TextMeshProFloatingText.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TextMeshProFloatingText.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TextMeshProFloatingText",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.TextMeshSpawner.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.TextMeshSpawner.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.TextMeshSpawner",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.VertexColorCycler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.VertexColorCycler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.VertexColorCycler",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.VertexJitter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.VertexJitter.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.VertexJitter",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.VertexShakeA.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.VertexShakeA.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.VertexShakeA",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.VertexShakeB.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.VertexShakeB.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.VertexShakeB",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.VertexZoom.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.VertexZoom.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.VertexZoom",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.WarpTextExample.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.WarpTextExample.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples.WarpTextExample",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.Examples.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.Examples.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.Examples",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_DigitValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_DigitValidator.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_DigitValidator",
-      "Summary": "<p sourcefile=\"api/TMPro.TMP_DigitValidator.yml\" sourcestartlinenumber=\"1\">EXample of a Custom Character Input Validator to only allow digits from 0 to 9.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_PhoneNumberValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_PhoneNumberValidator.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_PhoneNumberValidator",
-      "Summary": "<p sourcefile=\"api/TMPro.TMP_PhoneNumberValidator.yml\" sourcestartlinenumber=\"1\">Example of a Custom Character Input Validator to only allow phone number in the (800) 555-1212 format.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.CharacterSelectionEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.CharacterSelectionEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler.CharacterSelectionEvent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.LineSelectionEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.LineSelectionEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler.LineSelectionEvent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.LinkSelectionEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.LinkSelectionEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler.LinkSelectionEvent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.SpriteSelectionEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.SpriteSelectionEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler.SpriteSelectionEvent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.WordSelectionEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.WordSelectionEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler.WordSelectionEvent",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.TMP_TextEventHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.TMP_TextEventHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro.TMP_TextEventHandler",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TMPro.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TMPro.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TMPro",
-      "Summary": null
-    },
-    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
@@ -915,16 +229,6 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "getting-started.md",
-      "output": {
-        ".html": {
-          "relative_path": "getting-started.html"
         }
       },
       "version": ""
@@ -1131,6 +435,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_buttons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_buttons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_scene.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/scope_part_names.png",
       "output": {
         "resource": {
@@ -1161,16 +485,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "index_org.md",
-      "output": {
-        ".html": {
-          "relative_path": "index_org.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "installation.md",
       "output": {
         ".html": {
@@ -1185,6 +499,16 @@
       "output": {
         ".html": {
           "relative_path": "pdf_cover.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sample_demo_1.md",
+      "output": {
+        ".html": {
+          "relative_path": "sample_demo_1.html"
         }
       },
       "version": ""
