@@ -78,7 +78,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Atmoph.ConvertedData",
-      "Summary": "<p sourcefile=\"api/Atmoph.ConvertedData.yml\" sourcestartlinenumber=\"1\">Type of Scope converted data that is calculated from raw data\nsee:\nRawData</p>\n"
+      "Summary": "<p sourcefile=\"api/Atmoph.ConvertedData.yml\" sourcestartlinenumber=\"1\">Type of Scope converted data that is calculated from raw data</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -162,7 +162,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Atmoph.ScopeOffset",
-      "Summary": "<p sourcefile=\"api/Atmoph.ScopeOffset.yml\" sourcestartlinenumber=\"1\">Type of Scope offset\nElements are similar to elements of type ConvertedData.\nsee:\nConvertedData</p>\n"
+      "Summary": "<p sourcefile=\"api/Atmoph.ScopeOffset.yml\" sourcestartlinenumber=\"1\">Type of Scope offset\nElements are similar to elements of type ConvertedData.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -190,7 +190,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Atmoph.Vector4f",
-      "Summary": "<p sourcefile=\"api/Atmoph.Vector4f.yml\" sourcestartlinenumber=\"1\">Type of Vector4f\nThis is used for quaternion.\nsee:\nRawData.quaternion</p>\n"
+      "Summary": "<p sourcefile=\"api/Atmoph.Vector4f.yml\" sourcestartlinenumber=\"1\">Type of Vector4f\nThis is used for quaternion.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -649,6 +649,26 @@
       "output": {
         "resource": {
           "relative_path": "images/sample_demo_1_buttons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_dialog_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_dialog_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_dialog_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_dialog_2.png"
         }
       },
       "version": ""
