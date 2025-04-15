@@ -685,6 +685,116 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_10.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_10.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_11.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_11.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_6.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_6.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_7.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_7.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_8.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_8.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample_demo_1_start_9.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample_demo_1_start_9.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/scope_part_names.png",
       "output": {
         "resource": {
