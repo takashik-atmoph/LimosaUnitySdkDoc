@@ -12,6 +12,216 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.BondedScope.ScopeState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.BondedScope.ScopeState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.BondedScope.ScopeState",
+      "Summary": "<p sourcefile=\"api/Atmoph.BondedScope.ScopeState.yml\" sourcestartlinenumber=\"1\">Type of Scope's state</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.BondedScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.BondedScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.BondedScope",
+      "Summary": "<p sourcefile=\"api/Atmoph.BondedScope.yml\" sourcestartlinenumber=\"1\">Type for all paired Scope.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ButtonState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ButtonState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ButtonState",
+      "Summary": "<p sourcefile=\"api/Atmoph.ButtonState.yml\" sourcestartlinenumber=\"1\">Type of ButtonState</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ButtonStateChanged.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ButtonStateChanged.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ButtonStateChanged",
+      "Summary": "<p sourcefile=\"api/Atmoph.ButtonStateChanged.yml\" sourcestartlinenumber=\"1\">Type for ButtonState change\nThis contains the previous and current ButtonState instances after the state has changed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ConvertedData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ConvertedData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ConvertedData",
+      "Summary": "<p sourcefile=\"api/Atmoph.ConvertedData.yml\" sourcestartlinenumber=\"1\">Type of Scope converted data that is calculated from raw data\nsee:\nRawData</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.IntegerChanged.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.IntegerChanged.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.IntegerChanged",
+      "Summary": "<p sourcefile=\"api/Atmoph.IntegerChanged.yml\" sourcestartlinenumber=\"1\">Type for Integer value change\nThis contains the previous and current value after the value has changed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.RawData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.RawData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.RawData",
+      "Summary": "<p sourcefile=\"api/Atmoph.RawData.yml\" sourcestartlinenumber=\"1\">Type of Scope Raw data</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ScopeAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ScopeAddress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ScopeAddress",
+      "Summary": "<p sourcefile=\"api/Atmoph.ScopeAddress.yml\" sourcestartlinenumber=\"1\">Type of Scope address</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ScopeButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ScopeButton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ScopeButton",
+      "Summary": "<p sourcefile=\"api/Atmoph.ScopeButton.yml\" sourcestartlinenumber=\"1\">Class to map the Scope button to the controll path.\nThis class is set to button objects in VirtualButtons of WindowProtocol.prefab</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ScopeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ScopeInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ScopeInfo",
+      "Summary": "<p sourcefile=\"api/Atmoph.ScopeInfo.yml\" sourcestartlinenumber=\"1\">Type of Scope static information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ScopeOffset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ScopeOffset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ScopeOffset",
+      "Summary": "<p sourcefile=\"api/Atmoph.ScopeOffset.yml\" sourcestartlinenumber=\"1\">Type of Scope offset\nElements are similar to elements of type ConvertedData.\nsee:\nConvertedData</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.ServiceBindState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.ServiceBindState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.ServiceBindState",
+      "Summary": "<p sourcefile=\"api/Atmoph.ServiceBindState.yml\" sourcestartlinenumber=\"1\">Type for state indicating whether the service in AAR is bound or not.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.Vector4f.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.Vector4f.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.Vector4f",
+      "Summary": "<p sourcefile=\"api/Atmoph.Vector4f.yml\" sourcestartlinenumber=\"1\">Type of Vector4f\nThis is used for quaternion.\nsee:\nRawData.quaternion</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.WindowProtocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.WindowProtocol.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph.WindowProtocol",
+      "Summary": "<p sourcefile=\"api/Atmoph.WindowProtocol.yml\" sourcestartlinenumber=\"1\">Singleton class that serves as the base for Yo itself and Scope operations and data exchange</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Atmoph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Atmoph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Atmoph",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Limosa.BondedScope.ScopeState.yml",
       "output": {
         ".html": {

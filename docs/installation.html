@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>&quot;インストールとビルド設定&quot;の目次  | Limosa Unity SDK </title>
+      <title>&quot;インストールとビルド設定&quot;の目次  | Atmoph Window SDK for Unity v1.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="&quot;インストールとビルド設定&quot;の目次  | Limosa Unity SDK ">
+      <meta name="title" content="&quot;インストールとビルド設定&quot;の目次  | Atmoph Window SDK for Unity v1.0 ">
       
       
       <link rel="icon" href="images/favicon_atmoph.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Limosa Unity SDK">
-            Limosa Unity SDK
+            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Atmoph Window SDK for Unity v1.0">
+            Atmoph Window SDK for Unity v1.0
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -78,11 +78,11 @@
 <li><a href="#sdk%E3%81%AE%E5%86%85%E5%AE%B9">SDKの内容</a></li>
 <li><a href="#%E3%83%93%E3%83%AB%E3%83%89%E8%A8%AD%E5%AE%9A">ビルド設定</a></li>
 </ul>
-<p>SDKのインストールは、Unityのプロジェクトに&quot;LimosaAPI.unitypackage&quot;をインポートすることで行います。</p>
+<p>SDKのインストールは、Unityのプロジェクトに&quot;AtmophWindowSDKforUnity_v{バージョン番号}.unitypackage&quot;をインポートすることで行います。</p>
 <p>※ 各図はUnity6(6000.0.35f1.7976.6927)のものです。</p>
 <h1 id="インストール手順">インストール手順</h1>
 <ol>
-<li>Unityのメニューバーの次のボタンから&quot;LimosaAPI.unitypackage&quot;をインポートする</li>
+<li>Unityのメニューバーの次のボタンからunitypackageをインポートする</li>
 </ol>
 <p>Assets -&gt; Import Package -&gt; Custom Package</p>
 <p><img src="images/installation_1.png" alt="SDKパッケージ"></p>
@@ -100,31 +100,31 @@
 </thead>
 <tbody>
 <tr>
-<td>AWYo-release.aar</td>
-<td>Yo本体からのインテントを受信するAndroid ARchive</td>
+<td>AWSDK-release.aar</td>
+<td>Atmoph Window本体からのインテントを受信するAndroid ARchive</td>
 </tr>
 <tr>
 <td>unity_plugin-release.aar</td>
-<td>AWYo-release.aar で受信したインテントをトリガーにUnityに通知を送るAndroid ARchive</td>
+<td>AWSDK-release.aar で受信したインテントをトリガーにUnityに通知を送るAndroid ARchive</td>
 </tr>
 <tr>
-<td>LimosaProtocol.prefab</td>
-<td>Yoの機能を利用するためのプレハブアセット</td>
+<td>WindowProtocol.prefab</td>
+<td>Atmoph Window の機能を利用するためのプレハブアセット</td>
 </tr>
 <tr>
-<td>LimosaProtocol.cs</td>
-<td>Yoの機能を利用したり、Yoからの通知を受けるシングルトンクラス&quot;LimosaProtocol&quot;が定義されているC＃ソースファイル。unity_plugin-release.aarと連携する。LimosaProtocol.prefabにComponentとしてアタッチされている。</td>
+<td>WindowProtocol.cs</td>
+<td>Atmoph Window の機能を利用したり、Yoからの通知を受けるシングルトンクラス&quot;WindowProtocol&quot;が定義されているC＃ソースファイル。unity_plugin-release.aarと連携する。WindowProtocol.prefabにComponentとしてアタッチされている。</td>
 </tr>
 <tr>
 <td>ScopeButton.cs</td>
-<td>LimosaProtocolクラスで受け取ったScopeのボタン操作をUnityのInputControlにマッピングするためのクラス&quot;ScopeButton&quot;が定義されているC＃ソースファイル。LimosaProtocol.prefab内のScopeの各ボタンに対応するゲームオブジェクトにComponentとしてアタッチされている。</td>
+<td>WindowProtocolクラスで受け取ったScopeのボタン操作をUnityのInputControlにマッピングするためのクラス&quot;ScopeButton&quot;が定義されているC＃ソースファイル。WindowProtocol.prefab内のScopeの各ボタンに対応するゲームオブジェクトにComponentとしてアタッチされている。</td>
 </tr>
 </tbody>
 </table>
-<p>※ SDKをインストール後、LimosaProtocol.prefabをHierarchyウィンドウに追加した状態</p>
+<p>※ SDKをインストール後、WindowProtocol.prefabをHierarchyウィンドウに追加した状態</p>
 <p><img src="images/installation_3.png" alt="SDK Contents"></p>
 <h1 id="ビルド設定">ビルド設定</h1>
-<p>YoはAndroidベースのOSで動いていますので、ビルド設定はAndroid用プロファイルを用います。</p>
+<p>Atmoph WindowはAndroidベースのOSで動いていますので、ビルド設定はAndroid用プロファイルを用います。</p>
 <ol>
 <li>Unityのメニューバーの次のボタンから&quot;Build Profiles&quot;ダイアログを表示する</li>
 </ol>
@@ -152,7 +152,7 @@
 </div>
 <hr>
 <p>以上でビルド設定は完了です。Android Prifileの&quot;Build And Run&quot;ボタンを押して、アプリがビルドされYo開発機で起動されたら成功です。</p>
-<p>Universal 3Dテンプレートで作った空アプリでビルドと起動が成功すると、Yo開発機に次のような画面が表示されます。</p>
+<p>Universal 3Dテンプレートで作った空アプリでビルドと起動が成功すると、Atmoph Window開発機に次のような画面が表示されます。</p>
 <img src="images/empty_app.png" width="30%">
 <p>※ &quot;Build And Run&quot;ボタンを押すとビルド結果のAPKファイルを保存するパスの設定が求められます。任意のパスを設定してください。</p>
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>&quot;サンプルデモ&quot;の目次  | Limosa Unity SDK </title>
+      <title>&quot;サンプルデモ&quot;の目次  | Atmoph Window SDK for Unity v1.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="&quot;サンプルデモ&quot;の目次  | Limosa Unity SDK ">
+      <meta name="title" content="&quot;サンプルデモ&quot;の目次  | Atmoph Window SDK for Unity v1.0 ">
       
       
       <link rel="icon" href="images/favicon_atmoph.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Limosa Unity SDK">
-            Limosa Unity SDK
+            <img id="logo" class="svg" src="images/icon_atmophlogo_2.png" alt="Atmoph Window SDK for Unity v1.0">
+            Atmoph Window SDK for Unity v1.0
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -74,39 +74,39 @@
 <h1 id="サンプルデモの目次-">&quot;サンプルデモ&quot;の目次 <!-- omit in toc --></h1>
 
 <ul>
-<li><a href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%87%E3%83%A2-roll-a-ball-game-with-limosa">サンプルデモ Roll-a-Ball Game with Limosa</a>
+<li><a href="#1-%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%87%E3%83%A2-roll-a-ball-game-for-atmoph-window">1. サンプルデモ Roll-a-Ball Game for Atmoph Window</a>
 <ul>
-<li><a href="#%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9">動かし方</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8Bsdk%E3%81%AE%E6%A9%9F%E8%83%BD">使用しているSDKの機能</a>
+<li><a href="#11-%E5%8B%95%E3%81%8B%E3%81%97%E6%96%B9">1.1. 動かし方</a></li>
+<li><a href="#12-%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8Bsdk%E3%81%AE%E6%A9%9F%E8%83%BD">1.2. 使用しているSDKの機能</a>
 <ul>
-<li><a href="#1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5--%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%82%92scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B">1. Scopeのボタン操作の検知 : プレイヤーをScopeのボタンでコントロールできるようにする</a></li>
-<li><a href="#2-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97--%E5%9C%B0%E9%9D%A2%E3%81%AE%E8%A7%92%E5%BA%A6%E3%82%92scope%E3%81%AE%E5%90%91%E3%81%8D%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B">2. Scopeのポインティング位置、向き、距離センター値の取得 : 地面の角度をScopeの向きでコントロールできるようにする</a></li>
-<li><a href="#3-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%8B%E3%82%AA%E3%83%B3%E5%BD%A2%E5%BC%8F%E3%81%AEscope%E3%81%AE%E5%90%91%E3%81%8D%E3%83%9C%E3%82%BF%E3%83%B3%E7%8A%B6%E6%85%8B%E3%81%AE%E7%94%BB%E9%9D%A2%E5%87%BA%E5%8A%9B">3. Scopeのズームリングデータの取得：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</a></li>
-<li><a href="#4-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%81%AE%E7%94%BB%E9%9D%A2%E8%A1%A8%E7%A4%BA%E3%82%84%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E3%81%AE%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B">4. Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）：接続状態の画面表示や、バッテリー残量のログ出力</a>
+<li><a href="#121-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5--%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%82%92scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B">1.2.1. Scopeのボタン操作の検知 : プレイヤーをScopeのボタンでコントロールできるようにする</a></li>
+<li><a href="#122-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97--%E5%9C%B0%E9%9D%A2%E3%81%AE%E8%A7%92%E5%BA%A6%E3%82%92scope%E3%81%AE%E5%90%91%E3%81%8D%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B">1.2.2. Scopeのポインティング位置、向き、距離センター値の取得 : 地面の角度をScopeの向きでコントロールできるようにする</a></li>
+<li><a href="#123-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%8B%E3%82%AA%E3%83%B3%E5%BD%A2%E5%BC%8F%E3%81%AEscope%E3%81%AE%E5%90%91%E3%81%8D%E3%83%9C%E3%82%BF%E3%83%B3%E7%8A%B6%E6%85%8B%E3%81%AE%E7%94%BB%E9%9D%A2%E5%87%BA%E5%8A%9B">1.2.3. Scopeのズームリングデータの取得：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</a></li>
+<li><a href="#124-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%81%AE%E7%94%BB%E9%9D%A2%E8%A1%A8%E7%A4%BA%E3%82%84%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F%E3%81%AE%E3%83%AD%E3%82%B0%E5%87%BA%E5%8A%9B">1.2.4. Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）：接続状態の画面表示や、バッテリー残量のログ出力</a>
 <ul>
-<li><a href="#limosaprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">LimosaProtocol.ScopeConnectionStateプロパティを使用</a></li>
-<li><a href="#limosaprotocolgetscopes%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E4%BD%BF%E7%94%A8">LimosaProtocol.GetScopesメソッドを使用</a></li>
-<li><a href="#limosaprotocolonconnectionstatechangedevent%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">LimosaProtocol.OnConnectionStateChangedEventプロパティにコールバックメソッドを追加する</a></li>
+<li><a href="#1241-windowprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">1.2.4.1. WindowProtocol.ScopeConnectionStateプロパティを使用</a></li>
+<li><a href="#1242-windowprotocolgetscopes%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E4%BD%BF%E7%94%A8">1.2.4.2. WindowProtocol.GetScopesメソッドを使用</a></li>
+<li><a href="#1243-windowprotocolonconnectionstatechangedevent%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">1.2.4.3. WindowProtocol.OnConnectionStateChangedEventプロパティにコールバックメソッドを追加する</a></li>
 </ul>
 </li>
-<li><a href="#5-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">5. Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></li>
-<li><a href="#6-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%ABscope%E3%82%92%E6%8C%AF%E5%8B%95%E3%81%95%E3%81%9B%E3%82%8B">6. Scopeへの振動指示：ボタンを押した際にScopeを振動させる</a></li>
-<li><a href="#7-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B2%E3%83%BC%E3%83%A0%E7%B5%82%E4%BA%86%E6%99%82%E3%81%AByo%E6%9C%AC%E4%BD%93%E6%A9%9F%E8%83%BD%E3%81%AB%E6%88%BB%E3%82%8B">7. Unityアプリの終了を本体に伝える：ゲーム終了時にYo本体機能に戻る</a></li>
-</ul>
-</li>
+<li><a href="#125-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">1.2.5. Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></li>
+<li><a href="#126-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%9F%E9%9A%9B%E3%81%ABscope%E3%82%92%E6%8C%AF%E5%8B%95%E3%81%95%E3%81%9B%E3%82%8B">1.2.6. Scopeへの振動指示：ボタンを押した際にScopeを振動させる</a></li>
+<li><a href="#127-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B%E3%82%B2%E3%83%BC%E3%83%A0%E7%B5%82%E4%BA%86%E6%99%82%E3%81%AByo%E6%9C%AC%E4%BD%93%E6%A9%9F%E8%83%BD%E3%81%AB%E6%88%BB%E3%82%8B">1.2.7. Unityアプリの終了を本体に伝える：ゲーム終了時にYo本体機能に戻る</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="サンプルデモ-roll-a-ball-game-with-limosa">サンプルデモ Roll-a-Ball Game with Limosa</h1>
+</li>
+</ul>
+<h1 id="1-サンプルデモ-roll-a-ball-game-for-atmoph-window">1. サンプルデモ Roll-a-Ball Game for Atmoph Window</h1>
 <p>Unityの一般的なサンプルデモ <a href="https://learn.unity.com/project/roll-a-ball">Roll-a-Ball Game</a> をSDKを用いてYoで遊べるようにしたデモです。サンプルデモプロジェクトのScenes/MiniGameに実装されています。</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Roll-a-Ball Gameの内容や実装方法については、Unityの公式ドキュメント<a href="https://learn.unity.com/project/roll-a-ball">Roll-a-Ball Game</a> を参照してください。</p>
 </div>
 <p><img src="images/sample_demo_1_scene.png" alt="Button Mapping"></p>
-<h2 id="動かし方">動かし方</h2>
+<h2 id="11-動かし方">1.1. 動かし方</h2>
 <ol>
-<li>rollaballwithlimosa.zipを展開し、Unity.HubからUnityプロジェクトとして読み込む</li>
+<li>rollaballforatmophwindow.zipを展開し、Unity.HubからUnityプロジェクトとして読み込む</li>
 <li><a href="installation.html#%E3%83%93%E3%83%AB%E3%83%89%E8%A8%AD%E5%AE%9A">ビルド設定</a>を実施して、&quot;Build And Run&quot;</li>
 </ol>
 <div class="NOTE">
@@ -117,19 +117,19 @@
 <h5>Note</h5>
 <p>デモは <a href="installation.html#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%89%8B%E9%A0%86">SDKのインストール</a> はすでに実施済みの状態になっています。</p>
 </div>
-<h2 id="使用しているsdkの機能">使用しているSDKの機能</h2>
+<h2 id="12-使用しているsdkの機能">1.2. 使用しているSDKの機能</h2>
 <p>このデモではSDKの次の機能を使用しています。</p>
 <ol>
-<li><a href="how_to_use.html#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">Scopeのボタン操作の検知</a> : プレイヤーをScopeのボタンでコントロールできるようにする</li>
-<li><a href="how_to_use.html#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのポインティング位置、向き、距離センター値の取得</a> : 地面の角度をScopeの向きでコントロールできるようにする</li>
-<li><a href="how_to_use.html#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのズームリングデータの取得</a>：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</li>
-<li><a href="how_to_use.html#1-4-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a>：接続状態の画面表示や、バッテリー残量のログ出力</li>
-<li><a href="how_to_use.html#1-5-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a>：Scope情報のログ出力</li>
-<li><a href="how_to_use.html#1-6-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">Scopeへの振動指示</a>：ボタンを押した際にScopeを振動させる</li>
-<li><a href="how_to_use.html#1-7-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">Unityアプリの終了を本体に伝える</a>：ゲーム終了時にYo本体機能に戻る</li>
+<li><a href="how_to_use.html#11-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">Scopeのボタン操作の検知</a> : プレイヤーをScopeのボタンでコントロールできるようにする</li>
+<li><a href="how_to_use.html#13-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのポインティング位置、向き、距離センター値の取得</a> : 地面の角度をScopeの向きでコントロールできるようにする</li>
+<li><a href="how_to_use.html#12-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのズームリングデータの取得</a>：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</li>
+<li><a href="how_to_use.html#14-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a>：接続状態の画面表示や、バッテリー残量のログ出力</li>
+<li><a href="how_to_use.html#15-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a>：Scope情報のログ出力</li>
+<li><a href="how_to_use.html#16-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">Scopeへの振動指示</a>：ボタンを押した際にScopeを振動させる</li>
+<li><a href="how_to_use.html#17-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">Unityアプリの終了を本体に伝える</a>：ゲーム終了時にYo本体機能に戻る</li>
 </ol>
-<h3 id="1-scopeのボタン操作の検知--プレイヤーをscopeのボタンでコントロールできるようにする">1. <a href="how_to_use.html#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">Scopeのボタン操作の検知</a> : プレイヤーをScopeのボタンでコントロールできるようにする</h3>
-<p>LimosaProtocol.prefabをHierarchyウィンドウに追加し、その子オブジェクトのVirtualButtonsの子オブジェクトでScopeの各ボタンをInputControlにマッピングしています。マッピング先は次のようになっています。</p>
+<h3 id="121-scopeのボタン操作の検知--プレイヤーをscopeのボタンでコントロールできるようにする">1.2.1. <a href="how_to_use.html#1-1-scope%E3%81%AE%E3%83%9C%E3%82%BF%E3%83%B3%E6%93%8D%E4%BD%9C%E3%81%AE%E6%A4%9C%E7%9F%A5">Scopeのボタン操作の検知</a> : プレイヤーをScopeのボタンでコントロールできるようにする</h3>
+<p>WindowProtocol.prefabをHierarchyウィンドウに追加し、その子オブジェクトのVirtualButtonsの子オブジェクトでScopeの各ボタンをInputControlにマッピングしています。マッピング先は次のようになっています。</p>
 <table>
 <thead>
 <tr>
@@ -177,13 +177,13 @@
 </tbody>
 </table>
 <p><img src="images/sample_demo_1_buttons.png" alt="Button Mapping"></p>
-<h3 id="2-scopeのポインティング位置向き距離センター値の取得--地面の角度をscopeの向きでコントロールできるようにする">2. <a href="how_to_use.html#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのポインティング位置、向き、距離センター値の取得</a> : 地面の角度をScopeの向きでコントロールできるようにする</h3>
+<h3 id="122-scopeのポインティング位置向き距離センター値の取得--地面の角度をscopeの向きでコントロールできるようにする">1.2.2. <a href="how_to_use.html#13-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのポインティング位置、向き、距離センター値の取得</a> : 地面の角度をScopeの向きでコントロールできるようにする</h3>
 <p>Scripts/SurroundingController.csで使用しています。</p>
 <pre><code class="lang-csharp">    void FixedUpdate()
     {
         // Slightly rotate the floor with Scope's gyroscope
-        var offset = LimosaProtocol.Instance.ScopeOffset.FirstOrDefault().Value;
-        var data = LimosaProtocol.Instance.ScopeConvertedData.FirstOrDefault().Value;
+        var offset = WindowProtocol.Instance.ScopeOffset.FirstOrDefault().Value;
+        var data = WindowProtocol.Instance.ScopeConvertedData.FirstOrDefault().Value;
         if (data != null &amp;&amp; offset != null)
         {
             var pitch = Mathf.Rad2Deg * (data.pitch - offset.pitch);
@@ -199,53 +199,53 @@
         }
     }
 </code></pre>
-<p><a href="how_to_use.html#1-3-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">LimosaProtocol.ScopeConvertedData</a>プロパティから取得したその時点のScopeの<a class="xref" href="api/Limosa.ConvertedData.html">ConvertedData</a>からScopeの角度(<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_pitch">ConvertedData.pitch</a>、<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_yaw">ConvertedData.yaw</a>、<a class="xref" href="api/Limosa.ConvertedData.html#Limosa_ConvertedData_roll">ConvertedData.roll</a>)を取得し、それを基に地面を回転しています。</p>
-<pre><code>var data = LimosaProtocol.Instance.ScopeConvertedData.FirstOrDefault().Value;
+<p><a href="how_to_use.html#13-scope%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%8D%E7%BD%AE%E5%90%91%E3%81%8D%E8%B7%9D%E9%9B%A2%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%80%A4%E3%81%AE%E5%8F%96%E5%BE%97">WindowProtocol.ScopeConvertedData</a>プロパティから取得したその時点のScopeの<a class="xref" href="api/Atmoph.ConvertedData.html">ConvertedData</a>からScopeの角度(<a class="xref" href="api/Atmoph.ConvertedData.html#Atmoph_ConvertedData_pitch">ConvertedData.pitch</a>、<a class="xref" href="api/Atmoph.ConvertedData.html#Atmoph_ConvertedData_yaw">ConvertedData.yaw</a>、<a class="xref" href="api/Atmoph.ConvertedData.html#Atmoph_ConvertedData_roll">ConvertedData.roll</a>)を取得し、それを基に地面を回転しています。</p>
+<pre><code>var data = WindowProtocol.Instance.ScopeConvertedData.FirstOrDefault().Value;
 </code></pre>
-<p>Scopeの「ポインティング位置のリセット」機能にも対応できるように、<a href="how_to_use.html#3-1-offset">3-1 Offset</a>の<a href="xref:LimosaProtocol.ScopeOffset">オフセット値</a>も取得し、<a class="xref" href="api/Limosa.ConvertedData.html">ConvertedData</a>とオフセットとの差分から角度を算出しています。</p>
-<p>オフセット値の取得方法は<a href="how_to_use.html#3-1-1-limosaprotocolscopeoffsetlimosaprotocolscoperawoffset-%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%8B%E3%82%89%E3%81%AEoffset%E3%81%AE%E5%8F%96%E5%BE%97">3-1-1 LimosaProtocol.ScopeOffset、LimosaProtocol.ScopeRawOffset プロパティからのOffsetの取得</a>を使用しています。</p>
-<pre><code>var offset = LimosaProtocol.Instance.ScopeOffset.FirstOrDefault().Value;
+<p>Scopeの「ポインティング位置のリセット」機能にも対応できるように、<a href="how_to_use.html#31-offset">Offset</a>機能の<a href="xref:WindowProtocol.ScopeOffset">オフセット値</a>も取得し、<a class="xref" href="api/Atmoph.ConvertedData.html">ConvertedData</a>とオフセットとの差分から角度を算出しています。</p>
+<p>オフセット値の取得方法は<a href="how_to_use.html#311-windowprotocolscopeoffsetwindowprotocolscoperawoffset-%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%8B%E3%82%89%E3%81%AEoffset%E3%81%AE%E5%8F%96%E5%BE%97">WindowProtocol.ScopeOffset、WindowProtocol.ScopeRawOffset プロパティからのOffsetの取得</a>を使用しています。</p>
+<pre><code>var offset = WindowProtocol.Instance.ScopeOffset.FirstOrDefault().Value;
 </code></pre>
-<h3 id="3-scopeのズームリングデータの取得ズームリングクォータニオン形式のscopeの向きボタン状態の画面出力">3. <a href="how_to_use.html#1-2-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのズームリングデータの取得</a>：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</h3>
-<p>ScopeRawDataPrinter.csのUpdateメソッドで、接続しているScopeのズームリング、クォータニオン形式のScopeの向き、ボタン状態の情報を持った<a class="xref" href="api/Limosa.RawData.html">RawData</a>を画面に出力しています。</p>
+<h3 id="123-scopeのズームリングデータの取得ズームリングクォータニオン形式のscopeの向きボタン状態の画面出力">1.2.3. <a href="how_to_use.html#12-scope%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">Scopeのズームリングデータの取得</a>：ズームリング、クォータニオン形式のScopeの向き、ボタン状態の画面出力</h3>
+<p>ScopeRawDataPrinter.csのUpdateメソッドで、接続しているScopeのズームリング、クォータニオン形式のScopeの向き、ボタン状態の情報を持った<a class="xref" href="api/Atmoph.RawData.html">RawData</a>を画面に出力しています。</p>
 <pre><code class="lang-csharp">    void Update()
     {
-        var data = Limosa.ScopeRawData.FirstOrDefault().Value;
+        var data = Atmoph.ScopeRawData.FirstOrDefault().Value;
         textMeshProUGUI.text = (data != null) ? data.ToString() : &quot;&quot;;
     }
 </code></pre>
-<h3 id="4-scopeの動的情報の取得接続状態アドレスバッテリー残量接続状態の画面表示やバッテリー残量のログ出力">4. <a href="how_to_use.html#1-4-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a>：接続状態の画面表示や、バッテリー残量のログ出力</h3>
+<h3 id="124-scopeの動的情報の取得接続状態アドレスバッテリー残量接続状態の画面表示やバッテリー残量のログ出力">1.2.4. <a href="how_to_use.html#14-scope%E3%81%AE%E5%8B%95%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%8E%A5%E7%B6%9A%E7%8A%B6%E6%85%8B%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC%E6%AE%8B%E9%87%8F">Scopeの動的情報の取得（接続状態、アドレス、バッテリー残量）</a>：接続状態の画面表示や、バッテリー残量のログ出力</h3>
 <p>GameManager.csのUpdateメソッドで「Powerボタンを押すとバッテリー残量をログに出力」の機能が実装されています。</p>
-<p>バッテリー残量のログ出力は次のコードで実装されています。<a href="how_to_use.html#1-4-1-2-limosaprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">Limosa.ScopeConnectionState</a>で取得した接続中Scopeのアドレスを用いて、Limosa.GetBatteryLevel(how_to_use.html#1-4-2-バッテリー残量の取得)メソッドでバッテリー残量を取得しています。</p>
+<p>バッテリー残量のログ出力は次のコードで実装されています。<a href="how_to_use.html#1412-windowprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">WindowProtocol.ScopeConnectionState</a>で取得した接続中Scopeのアドレスを用いて、WindowProtocol.GetBatteryLevel(how_to_use.html#1-4-2-バッテリー残量の取得)メソッドでバッテリー残量を取得しています。</p>
 <pre><code class="lang-csharp">        else if (current?.pKey?.wasReleasedThisFrame == true)
         {
-            var address = Limosa.ScopeConnectionState.FirstOrDefault().Key;
+            var address = Atmoph.ScopeConnectionState.FirstOrDefault().Key;
             if (address != null)
             {
-                Limosa.Vibrate(new string[]{address}, 123);
-                Debug.Log($&quot;battery: {Limosa.GetBatteryLevel(address)}&quot;);
+                Atmoph.Vibrate(new string[]{address}, 123);
+                Debug.Log($&quot;battery: {WindowProtocol.GetBatteryLevel(address)}&quot;);
             }
         }
 </code></pre>
 <p>接続状態は次の３つの方法で取得されています。</p>
-<h4 id="limosaprotocolscopeconnectionstateプロパティを使用"><a href="how_to_use.html#1-4-1-2-limosaprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">LimosaProtocol.ScopeConnectionStateプロパティを使用</a></h4>
-<p>上記のLimosa.GetBatteryLevelメソッドの引数に設定するScopeアドレスを取得する方法です。</p>
-<h4 id="limosaprotocolgetscopesメソッドを使用"><a href="how_to_use.html#1-4-1-1-limosaprotocolgetscopes%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E4%BD%BF%E7%94%A8">LimosaProtocol.GetScopesメソッドを使用</a></h4>
-<p>GameManager.csのUpdateメソッドの次の処理で使われています。<a class="xref" href="api/Limosa.BondedScope.html">BondedScope</a>インスタンスで接続状態を一括で取得しています。</p>
-<pre><code>Debug.Log($&quot;GetScopes: {Limosa.GetScopes()}&quot;);
+<h4 id="1241-windowprotocolscopeconnectionstateプロパティを使用">1.2.4.1. <a href="how_to_use.html#1412-windowprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">WindowProtocol.ScopeConnectionStateプロパティを使用</a></h4>
+<p>上記のWindowProtocol.GetBatteryLevelメソッドの引数に設定するScopeアドレスを取得する方法です。</p>
+<h4 id="1242-windowprotocolgetscopesメソッドを使用">1.2.4.2. <a href="how_to_use.html#1411-windowprotocolgetscopes%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E4%BD%BF%E7%94%A8">WindowProtocol.GetScopesメソッドを使用</a></h4>
+<p>GameManager.csのUpdateメソッドの次の処理で使われています。<a class="xref" href="api/Atmoph.BondedScope.html">BondedScope</a>インスタンスで接続状態を一括で取得しています。</p>
+<pre><code>Debug.Log($&quot;GetScopes: {Atmoph.GetScopes()}&quot;);
 </code></pre>
-<h4 id="limosaprotocolonconnectionstatechangedeventプロパティにコールバックメソッドを追加する"><a href="how_to_use.html#1-4-1-3-limosaprotocolonconnectionstatechangedevent%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">LimosaProtocol.OnConnectionStateChangedEventプロパティにコールバックメソッドを追加する</a></h4>
-<p>GameManager.csのSetListenersメソッドで次のように<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_OnConnectionStateChangedEvent">LimosaProtocol.OnConnectionStateChangedEvent</a>へのコールバックメソッドの追加、削除が実装されています。Scopeの新規接続、接続解除のタイミングで呼び出されるコールバックメソッドで処理しています。</p>
+<h4 id="1243-windowprotocolonconnectionstatechangedeventプロパティにコールバックメソッドを追加する">1.2.4.3. <a href="how_to_use.html#1413-windowprotocolonconnectionstatechangedevent%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B">WindowProtocol.OnConnectionStateChangedEventプロパティにコールバックメソッドを追加する</a></h4>
+<p>GameManager.csのSetListenersメソッドで次のように<a class="xref" href="api/Atmoph.WindowProtocol.html#Atmoph_WindowProtocol_OnConnectionStateChangedEvent">WindowProtocol.OnConnectionStateChangedEvent</a>へのコールバックメソッドの追加、削除が実装されています。Scopeの新規接続、接続解除のタイミングで呼び出されるコールバックメソッドで処理しています。</p>
 <pre><code class="lang-csharp">    private void SetListeners(bool state)
     {
         if (state)
         {
-            Limosa.OnConnectionStateChangedEvent.AddListener(OnScopeStateChanged);
+            Atmoph.OnConnectionStateChangedEvent.AddListener(OnScopeStateChanged);
             player.GetComponent&lt;PlayerController&gt;().onTouchedEvent.AddListener(OnPlayerTouched);
         }
         else
         {
-            Limosa.OnConnectionStateChangedEvent.RemoveAllListeners();
+            Atmoph.OnConnectionStateChangedEvent.RemoveAllListeners();
             player.GetComponent&lt;PlayerController&gt;().onTouchedEvent.RemoveAllListeners();
         }
     }
@@ -253,43 +253,43 @@
     // Check Connection state changed &amp; Show on screen.
     private void OnScopeStateChanged()
     {
-        var state = Limosa.ScopeConnectionState.FirstOrDefault();
+        var state = Atmoph.ScopeConnectionState.FirstOrDefault();
         Debug.Log($&quot;OnScopeStateChanged. {state.Key}: {state.Value}&quot;);
         stateText.text = state.Value ? &quot;Connected&quot; : &quot;Disconnected&quot;;
     }
 </code></pre>
-<h3 id="5-scopeの静的情報の取得本体型番シリアルナンバーfwバージョンpnpid">5. <a href="how_to_use.html#1-5-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></h3>
-<p>GameManager.csのUpdateメソッドの次の処理で使われています。<a href="how_to_use.html#1-4-1-2-limosaprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">Limosa.ScopeConnectionState</a>で取得した接続中Scopeのアドレスを用いて、Limosa.GetScopeInfo(how_to_use.html#1-5-scopeの静的情報の取得本体型番シリアルナンバーfwバージョンpnpid)メソッドでScopeの静的情報を取得、ログに出力しています。</p>
+<h3 id="125-scopeの静的情報の取得本体型番シリアルナンバーfwバージョンpnpid">1.2.5. <a href="how_to_use.html#15-scope%E3%81%AE%E9%9D%99%E7%9A%84%E6%83%85%E5%A0%B1%E3%81%AE%E5%8F%96%E5%BE%97%E6%9C%AC%E4%BD%93%E5%9E%8B%E7%95%AA%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BCfw%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3pnpid">Scopeの静的情報の取得(本体型番、シリアルナンバー、FWバージョン、PnPID)</a></h3>
+<p>GameManager.csのUpdateメソッドの次の処理で使われています。<a href="how_to_use.html#1-4-1-2-windowprotocolscopeconnectionstate%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E4%BD%BF%E7%94%A8">Atmoph.ScopeConnectionState</a>で取得した接続中Scopeのアドレスを用いて、WindowProtocol.GetScopeInfo(how_to_use.html#1-5-scopeの静的情報の取得本体型番シリアルナンバーfwバージョンpnpid)メソッドでScopeの静的情報を取得、ログに出力しています。</p>
 <pre><code class="lang-csharp">        else if (current?.mKey?.wasPressedThisFrame == true)
         {
-            Debug.Log($&quot;GetScopes: {Limosa.GetScopes()}&quot;);
-            var address = Limosa.ScopeConnectionState.FirstOrDefault().Key;
+            Debug.Log($&quot;GetScopes: {Atmoph.GetScopes()}&quot;);
+            var address = Atmoph.ScopeConnectionState.FirstOrDefault().Key;
             if (address != null)
-                Debug.Log($&quot;GetScopeInfo: {Limosa.GetScopeInfo(address)}&quot;);
+                Debug.Log($&quot;GetScopeInfo: {Atmoph.GetScopeInfo(address)}&quot;);
         }
 </code></pre>
-<h3 id="6-scopeへの振動指示ボタンを押した際にscopeを振動させる">6. <a href="how_to_use.html#1-6-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">Scopeへの振動指示</a>：ボタンを押した際にScopeを振動させる</h3>
+<h3 id="126-scopeへの振動指示ボタンを押した際にscopeを振動させる">1.2.6. <a href="how_to_use.html#16-scope%E3%81%B8%E3%81%AE%E6%8C%AF%E5%8B%95%E6%8C%87%E7%A4%BA">Scopeへの振動指示</a>：ボタンを押した際にScopeを振動させる</h3>
 <p>GameManager.csのUpdateメソッドで「Power、風景ボタンを押すとScopeが振動」の機能が実装されています。
 Powerボタンが押された際は
-<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_Vibrate_System_String___System_Int32_">LimosaProtocol.Vibrate</a>、風景ボタンが押された際は
-<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_VibrateToAll_System_Int32_">LimosaProtocol.VibrateToAll</a>でScopeに振動を指示しています。</p>
+<a class="xref" href="api/Atmoph.WindowProtocol.html#Atmoph_WindowProtocol_Vibrate_System_String___System_Int32_">WindowProtocol.Vibrate</a>、風景ボタンが押された際は
+<a class="xref" href="api/Atmoph.WindowProtocol.html#Atmoph_WindowProtocol_VibrateToAll_System_Int32_">WindowProtocol.VibrateToAll</a>でScopeに振動を指示しています。</p>
 <pre><code class="lang-csharp">        else if (current?.pKey?.wasReleasedThisFrame == true)
         {
-            var address = Limosa.ScopeConnectionState.FirstOrDefault().Key;
+            var address = Atmoph.ScopeConnectionState.FirstOrDefault().Key;
             if (address != null)
             {
-                Limosa.Vibrate(new string[]{address}, 123);
-                Debug.Log($&quot;battery: {Limosa.GetBatteryLevel(address)}&quot;);
+                Atmoph.Vibrate(new string[]{address}, 123);
+                Debug.Log($&quot;battery: {Atmoph.GetBatteryLevel(address)}&quot;);
             }
         }
         else if (current?.vKey?.wasReleasedThisFrame == true)
-            Limosa.VibrateToAll(123);
+            Atmoph.VibrateToAll(123);
 </code></pre>
-<h3 id="7-unityアプリの終了を本体に伝えるゲーム終了時にyo本体機能に戻る">7. <a href="how_to_use.html#1-7-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">Unityアプリの終了を本体に伝える</a>：ゲーム終了時にYo本体機能に戻る</h3>
-<p>GameManager.csのUpdateメソッドで「トリガーボタンを押すとゲーム終了」の機能が実装されています。<a class="xref" href="api/Limosa.LimosaProtocol.html#Limosa_LimosaProtocol_GoBackToLimosa">LimosaProtocol.GoBackToLimosa</a>メソッドでゲームの終了をYo本体に伝えた上で、ゲームの終了処理を実施しています。</p>
+<h3 id="127-unityアプリの終了を本体に伝えるゲーム終了時にyo本体機能に戻る">1.2.7. <a href="how_to_use.html#17-unity%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%92%E6%9C%AC%E4%BD%93%E3%81%AB%E4%BC%9D%E3%81%88%E3%82%8B">Unityアプリの終了を本体に伝える</a>：ゲーム終了時にYo本体機能に戻る</h3>
+<p>GameManager.csのUpdateメソッドで「トリガーボタンを押すとゲーム終了」の機能が実装されています。<a class="xref" href="api/Atmoph.WindowProtocol.html#Atmoph_WindowProtocol_GoBackToWindow">WindowProtocol.GoBackToWindow</a>メソッドでゲームの終了をYo本体に伝えた上で、ゲームの終了処理を実施しています。</p>
 <pre><code class="lang-csharp">        else if (current?.qKey?.wasReleasedThisFrame == true)
         {
-            Limosa.GoBackToLimosa();
+            Atmoph.GoBackToWindow();
             QuitGame();
         }
 </code></pre>
